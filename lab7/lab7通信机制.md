@@ -97,13 +97,13 @@ void MessageTest(){
 
 结果
 
-![1](images\1.PNG)
+![1](.\images\1.PNG)
 
 ## 内容三：遇到的困难以及解决方法
 
 1. 这次实验在lab6基础上做的，编译时发现在/code目录下执行make命令会报错（lab6中是在/code/filesys目录下执行的make depend和make nachos命令，编译不报错）
 
-   ![2](images\2.PNG)
+   ![2](./images/2.PNG)
    
    > 感觉是Makfile的问题，但没改好，于是把Print和Copy在progtest.cc中重写了一遍。
 
