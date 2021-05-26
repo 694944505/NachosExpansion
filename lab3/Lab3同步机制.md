@@ -260,7 +260,7 @@ void ThreadTest8(){
 
 在随机调度算法下测试结果如图
 
-![捕获](C:\Users\69494\Desktop\软微\操统\lab3\images\1.PNG)
+![捕获](./images/1.PNG)
 
 基于锁和条件变量的实现代码如下
 
@@ -332,7 +332,7 @@ void ThreadTest9(){
 
 在随机调度算法下测试结果如图
 
-![2](C:\Users\69494\Desktop\软微\操统\lab3\images\2.PNG)
+![2](./images/2.PNG)
 
 ##### Challenge 1 实现barrier
 
@@ -384,7 +384,7 @@ void ThreadTest10(){
 
 在随机调度算法下测试结果如图
 
-![3](C:\Users\69494\Desktop\软微\操统\lab3\images\3.PNG)
+![3](./images/3.PNG)
 
 #####Challenge 2 实现read/write lock
 
@@ -461,7 +461,7 @@ void ThreadTest11(){
 
 在随机调度算法下测试结果如图
 
-![4](C:\Users\69494\Desktop\软微\操统\lab3\images\4.PNG)
+![4](./images/4.PNG)
 
 ##### Challenge 3  研究Linux的kfifo机制是否可以移植到Nachos上作为一个新的同步模块。
 

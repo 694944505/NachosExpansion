@@ -114,9 +114,9 @@ class FileHeader {
 
 在FileSystem类的成员函数中调用FileHeader类的成员函数实现文件信息更新，测试如下
 
-![1](C:\Users\69494\Desktop\软微\操统\lab4\images\1.PNG)
+![1](./images/1.PNG)
 
-![2](C:\Users\69494\Desktop\软微\操统\lab4\images\2.PNG)
+![2](./images/2.PNG)
 
 ##### Exercise3 扩展文件长度
 
@@ -198,13 +198,13 @@ FileHeader::Allocate(BitMap *freeMap, int fileSize)
 
 创建长度分别为1216B和32453B的file1和file2，测试如下
 
-![3](C:\Users\69494\Desktop\软微\操统\lab4\images\3.PNG)
+![3](./images/3.PNG)
 
-![4](C:\Users\69494\Desktop\软微\操统\lab4\images\4.PNG)
+![4](./images/4.PNG)
 
-![5](C:\Users\69494\Desktop\软微\操统\lab4\images\5.PNG)
+![5](./images/5.PNG)
 
-![6](C:\Users\69494\Desktop\软微\操统\lab4\images\6.PNG)
+![6](./images/6.PNG)
 
 ##### Exercise4 实现多级目录
 
@@ -307,7 +307,7 @@ FileSystem::Create(char *name, int initialSize, OpenFile *direcFile)
 
 对应的修改Open、Remove、Print、List成员函数，添加ld命令查看目录下的文件，测试如下
 
-![7](C:\Users\69494\Desktop\软微\操统\lab4\images\7.PNG)
+![7](./images/7.PNG)
 
 ##### Exercise5 动态调整文件长度
 
@@ -393,9 +393,9 @@ OpenFile::WriteAt(char *from, int numBytes, int position)
 
 测试如下
 
-![9](C:\Users\69494\Desktop\软微\操统\lab4\images\9.PNG)
+![9](./images/9.PNG)
 
-![10](C:\Users\69494\Desktop\软微\操统\lab4\images\10.PNG)
+![10](./images/10.PNG)
 
 #### 第二部分：文件访问的同步与互斥
 
@@ -485,7 +485,7 @@ void SynchConsole::ReadAvail()
 
 测试如下
 
-![11](C:\Users\69494\Desktop\软微\操统\lab4\images\11.PNG)
+![11](./images/11.PNG)
 
 ##### Exercise7 实现文件系统的同步互斥访问机制，达到如下效果：
 
@@ -628,7 +628,7 @@ PerformanceTest1()
 
 结果如下
 
-![12](C:\Users\69494\Desktop\软微\操统\lab4\images\12.PNG)
+![12](./images/12.PNG)
 
 (c)记录每一个文件的打开对象个数，当个数为0时文件才可以删除。
 
@@ -697,7 +697,7 @@ PerformanceTest2()
 
 结果如下
 
-![13](C:\Users\69494\Desktop\软微\操统\lab4\images\13.PNG)
+![13](./images/13.PNG)
 
 #### 第三部分
 
@@ -726,7 +726,7 @@ PerformanceTest3(){
 }
 ```
 
-![14](C:\Users\69494\Desktop\软微\操统\lab4\images\14.PNG)
+![14](./images/14.PNG)
 
 ## 内容三：遇到的困难以及解决方法
 

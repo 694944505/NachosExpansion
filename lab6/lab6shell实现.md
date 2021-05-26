@@ -303,15 +303,15 @@ void SynchConsoleTest(char *in, char *out)
 
 测试文件复制和用户执行程序如下：
 
-![1](C:\Users\69494\Desktop\软微\操统\lab6\images\1.PNG)
+![1](./images/1.PNG)
 
 测试文件查看如下：
 
-![2](C:\Users\69494\Desktop\软微\操统\lab6\images\2.PNG)
+![2](./images/2.PNG)
 
 测试目录跳转如下：
 
-![3](C:\Users\69494\Desktop\软微\操统\lab6\images\3.PNG)
+![3](./images/3.PNG)
 
 ## 内容三：遇到的困难以及解决方法
 

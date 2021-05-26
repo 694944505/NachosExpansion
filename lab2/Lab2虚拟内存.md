@@ -1,9 +1,5 @@
 # 虚拟内存实习报告
 
-
-
-[TOC]
-
 ## 内容一：总体概述
 
 本次实验通过阅读并修改**Nachos**底层源码，达到“实现虚拟存储系统”的目标。第一部分的主要内容是实现TLB的异常处理及相应的置换算法，第二部分实现全局内存管理机制和多线程，第三部分实现**Lazy-loading**。
@@ -80,7 +76,7 @@ TLB也是用TranslationEntry类实现的，所以在TranslationEntry类里添加
 
 更改test/sort.c函数，将数组长度设置为20，重新编译后测试如下。
 
-![1](C:\Users\69494\Desktop\软微\操统\lab2\images\1.PNG)
+![1](./images/1.PNG)
 
 其中./test/sort后的参数0、1分别表示FIFO、LRU策略，可以看出LRU策略的效果比较好。
 
@@ -98,7 +94,7 @@ TLB也是用TranslationEntry类实现的，所以在TranslationEntry类里添加
 
 有了内存全局管理结构之后，内存中单线程的限制就打破了。测试时，修改halt程序为直接调用Exit(0)，在userprog/progtest.cc的StartProcess中使用两个线程分别运行halt程序，结果如下。（参数-mt参数表示这是一次多线程测试）
 
-![2](C:\Users\69494\Desktop\软微\操统\lab2\images\2.PNG)
+![2](./images/2.PNG)
 
 #####Exercise6 缺页中断处理
 
@@ -114,9 +110,9 @@ TLB也是用TranslationEntry类实现的，所以在TranslationEntry类里添加
 
 首先通过FileSystem创建一个文件来模拟磁盘，修改Addspace类的构造函数，将用户程序的内容先装载到模拟的磁盘，等缺页中断发生时再装入内存。在Addspace类加入成员函数getPTE，负责将所需的页面从磁盘调入内存，并更新页表。当内存占满时，根据LRU策略把旧的页表项对应的物理内存写入磁盘。使用nachos源码自带的/test/matmult程序进行测试结果如下
 
-![3](C:\Users\69494\Desktop\软微\操统\lab2\images\3.PNG)
+![3](./images/3.PNG)
 
-![4](C:\Users\69494\Desktop\软微\操统\lab2\images\4.PNG)
+![4](./images/4.PNG)
 
 #### 第四部分、Challenges
 
@@ -128,7 +124,7 @@ TLB也是用TranslationEntry类实现的，所以在TranslationEntry类里添加
 
 倒排页表是一个全局性的页表，因此要在Machine类中创建和维护。在TranslationEntry类中增加threadID变量记录线程ID，修改userlog/addrspace.cc下的RestoreState函数（在倒排页表中进程切换时不需要更换页表）和getPTE函数。倒排页表在查找时要遍历整个页表，找逻辑地址、线程ID都符合查找条件的表项，按这个思路修改machine/translate.cc下的读取页表项的部分，修改machine/machine.cc下的SwapTLB函数，使用**Exercise5**中的多线程任务测试如下
 
-![5](C:\Users\69494\Desktop\软微\操统\lab2\images\5.PNG)
+![5](./images/5.PNG)
 
 ## 内容三：遇到的困难以及解决方法
 
@@ -142,7 +138,7 @@ TLB也是用TranslationEntry类实现的，所以在TranslationEntry类里添加
 
 3. 完成虚拟内存之后再测试**Exercise5**，发现输出变了
 
-   ![5](C:\Users\69494\Desktop\软微\操统\lab2\images\6.PNG)
+   ![5](./images/6.PNG)
 
    > 这是因为第一个线程用了虚拟内存之后实际上只用了三个页，而第二个线程需要的数据和第一个是一样的，共用的TLB没有清理，所以直接在TLB中读取了数据。
 

@@ -105,7 +105,7 @@ Linux实现了6种不同的调度策略对不同类型的进程进行调度
         t->Fork(emptyThread, (void *)0);
         t->printInfo();
     }
-![](images/1.png)
+![](./images/1.png)
 #####Exercise 3 增加全局线程管理机制
 **在Nachos中增加对线程数量的限制，使得Nachos中最多能够同时存在128个线程；
 仿照Linux中PS命令，增加一个功能TS(Threads Status)，能够显示当前系统中所有线程的信息和状态。**
@@ -126,7 +126,7 @@ Linux实现了6种不同的调度策略对不同类型的进程进行调度
         }
     }
 
-![](images/2.png)
+![](./images/2.png)
 ![](images/3.png)
 
 #####Exercise 4  源代码阅读

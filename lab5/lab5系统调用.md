@@ -211,7 +211,7 @@ main(){
 
 测试结果如下，可以看到系统正确地建立了文件并进行了读写操作
 
-![1](C:\Users\69494\Desktop\软微\操统\lab5\images\1.PNG)
+![1](./images/1.PNG)
 
 
 
@@ -365,7 +365,7 @@ int main(){
 
 测试结果如下，可以看到main中的后三条语句在exec线程完成之后才执行。
 
-![2](C:\Users\69494\Desktop\软微\操统\lab5\images\2.PNG)
+![2](./images/2.PNG)
 
 ## 内容三：遇到的困难以及解决方法
 
@@ -375,7 +375,7 @@ int main(){
 
 2. 这次lab遇到了一个非常奇怪的bug，如下图，用Exec执行和fileTest一样的程序fileSyscallTest，在输出Exercise5中的结果之后fileSyscallTest程序会陷入死循环打印"d"。事实上Exercise5中一开始我是用的下图所示的测试程序，在出现bug之后我把画横线部分改为了sort来测试，发现没有问题。最后我新建了和fileSyscallTest.c内容一样fileTest.c文件，编译之后运行就没有问题了。
 
-   ![4](C:\Users\69494\Desktop\软微\操统\lab5\images\4.png)
+   ![4](./images/4.png)
 
    > 目前不清楚为什么会有这样的bug。
 
